@@ -62,7 +62,24 @@ try {
     $pf = new ProcessFile($user, $password, $host, $file);
 
     if ($help) {
-
+        $helpOptions = array(
+            "\nRequired\n",
+            "-u <string>\t\tDatabase username",
+            "-p <string>\t\tDatabase password",
+            "-h <string>\t\tDatabase host",
+            "\nOptional\n",
+            "--file <file>\t\tCSV file",
+            "--create_table\t\tCreate users table",
+            "--delete_table\t\tDelete users table",
+            "--dry_run\t\tPerform a dry run of the process",
+            "--help\t\t\tDisplay this help",
+        );
+        if (is_array($helpOptions) && count($helpOptions) > 0) {
+            print "Usage: php user_upload.php [options] \n";
+            foreach($helpOptions as $helpValue){
+                print $helpValue .  "\n";
+            }
+        }
     } else {
         if ($createTable) {
             try {
