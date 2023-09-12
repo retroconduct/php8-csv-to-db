@@ -35,10 +35,17 @@ php user_upload.php -u user -p password -h 127.0.0.1 --create_table
 php user_upload.php -u user -p password -h 127.0.0.1 --delete_table
 ```
 
-## Instructions
+## Instructions Q1
 
 ```
 cd into folder
 run docker-compose up --build
 run php user_upload.php --help
+```
+
+## Instructions Q2
+
+```
+cd into folder
+run php foobar.php
 ```
